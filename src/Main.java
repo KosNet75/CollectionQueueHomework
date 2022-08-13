@@ -34,7 +34,7 @@ public class Main {
           human.tickets = human.tickets - 1;
 
           System.out.println(
-              human.firstName + " " + human.secondName + " прокатился на атракционе" + attraction
+              human.firstName + " " + human.secondName + " прокатился на аттракционе" + attraction
                   + "у клиента осталось билетов " + human.getTicket());
 
           queue.addLast(human);
