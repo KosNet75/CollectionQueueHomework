@@ -21,24 +21,21 @@ public class Main {
     while (!queue.isEmpty()) {
       Person human = queue.getFirst();
 
+      if (human.tickets > 0) {
 
-      if (human.tickets > -1) {
         String[] srcArr = {" Карусель ", " Колесо обозрения ", " Качели ", " Башня ",
             " Железная дорога ", " Американские горки ", " Кондор "};
         Random rnd = new Random();
         String[] selectedArr = new String[srcArr.length];
         for (int i = 0; i < human.tickets; i++) {
           selectedArr[i] = srcArr[rnd.nextInt(srcArr.length)];
-
           String attraction = selectedArr[i];
           human.tickets = human.tickets - 1;
-
           System.out.println(
               human.firstName + " " + human.secondName + " прокатился на аттракционе" + attraction
-                  + "у клиента осталось билетов " + human.getTicket());
-
-          queue.addLast(human);
+                  + "у клиента осталось билетов " + "[" + human.getTicket() + "]");
         }
+        queue.addLast(human);
       }
       queue.poll();
     }
@@ -57,10 +54,10 @@ public class Main {
 //    }
 //     String attraction = selectedArr[human.tickets];
 
-    persons.add(new Person("Константин", "Густов", 2));
-    persons.add(new Person("Ольга", "Федорова", 5));
-    persons.add(new Person("Филипп", "Воронов", 3));
-    persons.add(new Person("Алёна", "Загрекова", 6));
+    persons.add(new Person("Константин", "Густов", 1));
+    persons.add(new Person("Ольга", "Федорова", 3));
+    persons.add(new Person("Филипп", "Воронов", 4));
+    persons.add(new Person("Алёна", "Загрекова", 2));
 
     return persons;
 

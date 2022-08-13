@@ -3,7 +3,7 @@ import java.util.List;
 public class Person {
 String firstName;
   String secondName;
-  String attraction;
+ // String attraction;
   int tickets;
 
 
@@ -14,21 +14,6 @@ String firstName;
 
 
   }
-
-
-
-
-//  int selectCount = 30;
-//  String[] srcArr = {"Красный", "Оранжевый", "Желтый", "Зеленый",
-//      "Голубой", "Синий", "Фиолетовый"};
-//  String[] selectedArr = new String[selectCount];
-//  Random rnd = new Random();
-//        for (int i = 0; i < selectCount; i++) {
-//    selectedArr[i] = srcArr[rnd.nextInt(srcArr.length)];
-//  }
-//        System.out.println(Arrays.toString(selectedArr));
-
-
 
 
   @Override
