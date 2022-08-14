@@ -1,17 +1,14 @@
 import java.util.List;
 import java.util.ArrayDeque;
 import java.util.LinkedList;
-import java.util.Random;
-
 
 public class Main {
 
   public static void main(String[] args) {
     List<Person> person = new LinkedList<>();
 
-      System.out.println();
-      Person.printPersonTickets(generateClients(person));
-
+    System.out.println();
+    Person.printPersonTickets(generateClients(person));
 
     ArrayDeque<Person> queue = new ArrayDeque<>();
     for (Person s : person) {
@@ -22,22 +19,20 @@ public class Main {
       Person human = queue.getFirst();
 
       if (human.quantityTickets > 0) {
+        String attraction1 = "";
+        Person.typeAttraction();
 
-        String[] srcArr = {" Карусель ", " Колесо обозрения ", " Качели ", " Башня ",
-            " Железная дорога ", " Американские горки ", " Кондор "};
-           Random rnd = new Random();
-          String attraction = srcArr[rnd.nextInt(srcArr.length)];
-
-          human.quantityTickets = human.quantityTickets - 1;
-          System.out.println(
-              human.firstName + " " + human.secondName + " прокатился на аттракционе" + attraction
-                  + "у клиента осталось билетов " + "[" + human.getTickets() + "]");
+        human.quantityTickets = human.quantityTickets - 1;
+        System.out.println(
+            human.firstName + " " + human.secondName + " прокатился на аттракционе" + attraction1
+                + "у клиента осталось билетов " + "[" + human.getTickets() + "]");
 
         queue.addLast(human);
       }
       queue.poll();
     }
   }
+
   public static List<Person> generateClients(List<Person> persons) {
 
     persons.add(new Person("Николай", "Романов"));
@@ -47,7 +42,6 @@ public class Main {
     persons.add(new Person("Василий", "Голицин"));
     return persons;
   }
-
 }
 
 
