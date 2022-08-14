@@ -12,6 +12,7 @@ public class Main {
       System.out.println();
       Person.printPersonTickets(generateClients(person));
 
+
     ArrayDeque<Person> queue = new ArrayDeque<>();
     for (Person s : person) {
       queue.addLast(s);
