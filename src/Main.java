@@ -19,12 +19,9 @@ public class Main {
       Person human = queue.getFirst();
 
       if (human.quantityTickets > 0) {
-        String attraction1 = "";
-        Person.typeAttraction();
-
         human.quantityTickets = human.quantityTickets - 1;
         System.out.println(
-            human.firstName + " " + human.secondName + " прокатился на аттракционе" + attraction1
+            human.firstName + " " + human.secondName + " прокатился на аттракционе" + Person.typeAttraction()
                 + "у клиента осталось билетов " + "[" + human.getTickets() + "]");
 
         queue.addLast(human);

@@ -7,24 +7,22 @@ public class Person {
   String secondName;
   int quantityTickets;
 
-  Integer[] rndTickets = {1, 2, 3, 4, 5, 6};
-  Random rnd = new Random();
-  Integer rndTicket = rndTickets[rnd.nextInt(rndTickets.length)];
-
   public Person(String firstName, String secondName) {
     this.firstName = firstName;
     this.secondName = secondName;
     this.quantityTickets = rndTicket;
   }
 
-  public static String typeAttraction() {
+  Integer[] rndTickets = {1, 2, 3, 4, 5};
+  Random rnd = new Random();
+  Integer rndTicket = rndTickets[rnd.nextInt(rndTickets.length)];
 
+
+  public static String typeAttraction() {
     String[] srcArr1 = {" Карусель ", " Колесо обозрения ", " Качели ", " Башня ",
         " Железная дорога ", " Американские горки ", " Кондор "};
     Random rnd = new Random();
-   // String attraction1 = rnd.nextInt(srcArr1.length);
-    String attraction1 = (rnd.nextInt(srcArr1.length));
-    return attraction1;
+    return srcArr1[rnd.nextInt(srcArr1.length)];
   }
 
   public int getTickets() {
