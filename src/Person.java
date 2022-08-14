@@ -1,4 +1,5 @@
 import java.util.List;
+import java.util.Random;
 
 public class Person {
 String firstName;
@@ -7,11 +8,16 @@ String firstName;
   int quantityTickets;
 
 
-  public Person(String firstName, String secondName, int quantityTickets) {
+
+  Integer[] rndTickets = {1, 2, 3, 4, 5, 6};
+  Random rnd = new Random();
+  Integer rndTicket = rndTickets[rnd.nextInt(rndTickets.length)];
+
+  public Person(String firstName, String secondName) {
     this.firstName = firstName;
     this.secondName = secondName;
-    this.quantityTickets = quantityTickets;
-   // this.attraction = attraction;
+    this.quantityTickets = rndTicket;
+
   }
 
   public int getTickets() {

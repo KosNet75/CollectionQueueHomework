@@ -39,11 +39,11 @@ public class Main {
   }
   public static List<Person> generateClients(List<Person> persons) {
 
-    persons.add(new Person("Николай", "Романов", 3));
-    persons.add(new Person("Евдокия", "Лопухина", 5));
-    persons.add(new Person("Александр", "Меньшиков", 4));
-    persons.add(new Person("Екатерина", "Шуйская", 2));
-    persons.add(new Person("Василий", "Голицин", 1));
+    persons.add(new Person("Николай", "Романов"));
+    persons.add(new Person("Евдокия", "Лопухина"));
+    persons.add(new Person("Александр", "Меньшиков"));
+    persons.add(new Person("Екатерина", "Шуйская"));
+    persons.add(new Person("Василий", "Голицин"));
     return persons;
   }
 
