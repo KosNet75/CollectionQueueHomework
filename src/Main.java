@@ -1,4 +1,3 @@
-
 import java.util.List;
 import java.util.ArrayDeque;
 import java.util.LinkedList;
@@ -10,14 +9,9 @@ public class Main {
   public static void main(String[] args) {
     List<Person> person = new LinkedList<>();
 
-
-
       Person.printPersonTickets(generateClients(person));
 
-
-
     ArrayDeque<Person> queue = new ArrayDeque<>();
-    // Первое добавление очереди.
     for (Person s : person) {
       queue.addLast(s);
     }
@@ -34,14 +28,13 @@ public class Main {
           human.tickets = human.tickets - 1;
           System.out.println(
               human.firstName + " " + human.secondName + " прокатился на аттракционе" + attraction
-                  + "у клиента осталось билетов " + "[" + human.getTicket() + "]");
+                  + "у клиента осталось билетов " + "[" + human.getTickets() + "]");
 
         queue.addLast(human);
       }
       queue.poll();
     }
   }
-
   public static List<Person> generateClients(List<Person> persons) {
 
     persons.add(new Person("Николай", "Романов", 1));
@@ -49,9 +42,7 @@ public class Main {
     persons.add(new Person("Александр", "Меньшиков", 4));
     persons.add(new Person("Екатерина", "Шуйская", 2));
     persons.add(new Person("Василий", "Голицин", 3));
-
     return persons;
-
   }
 
 }
