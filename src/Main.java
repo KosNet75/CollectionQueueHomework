@@ -21,7 +21,8 @@ public class Main {
       if (human.quantityTickets > 0) {
         human.quantityTickets = human.quantityTickets - 1;
         System.out.println(
-            human.firstName + " " + human.secondName + " прокатился на аттракционе" + Person.typeAttraction()
+            human.firstName + " " + human.secondName + " прокатился на аттракционе"
+                + Person.typeAttraction()
                 + "у клиента осталось билетов " + "[" + human.getTickets() + "]");
 
         queue.addLast(human);

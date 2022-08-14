@@ -30,7 +30,8 @@ public class Person {
   }
 
 
-  @Override public String toString() {
+  @Override
+  public String toString() {
     return firstName + " " + secondName + " - купил(а) >> [" + quantityTickets + "] билет(а)";
   }
 
