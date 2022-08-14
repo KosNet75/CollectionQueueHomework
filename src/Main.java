@@ -27,6 +27,7 @@ public class Main {
             " Железная дорога ", " Американские горки ", " Кондор "};
            Random rnd = new Random();
           String attraction = srcArr[rnd.nextInt(srcArr.length)];
+
           human.quantityTickets = human.quantityTickets - 1;
           System.out.println(
               human.firstName + " " + human.secondName + " прокатился на аттракционе" + attraction

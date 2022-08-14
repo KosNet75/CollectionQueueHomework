@@ -13,6 +13,14 @@ String firstName;
   Random rnd = new Random();
   Integer rndTicket = rndTickets[rnd.nextInt(rndTickets.length)];
 
+
+//  String[] srcArr = {" Карусель ", " Колесо обозрения ", " Качели ", " Башня ",
+//      " Железная дорога ", " Американские горки ", " Кондор "};
+//  Random rnd1 = new Random();
+//  String attraction = srcArr[rnd1.nextInt(srcArr.length)];
+
+
+
   public Person(String firstName, String secondName) {
     this.firstName = firstName;
     this.secondName = secondName;
