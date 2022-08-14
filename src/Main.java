@@ -25,16 +25,13 @@ public class Main {
 
         String[] srcArr = {" Карусель ", " Колесо обозрения ", " Качели ", " Башня ",
             " Железная дорога ", " Американские горки ", " Кондор "};
-        Random rnd = new Random();
-        String[] selectedArr = new String[srcArr.length];
-        for (int i = 0; i < human.tickets; i++) {
-          selectedArr[i] = srcArr[rnd.nextInt(srcArr.length)];
-          String attraction = selectedArr[i];
+           Random rnd = new Random();
+          String attraction = srcArr[rnd.nextInt(srcArr.length)];
           human.tickets = human.tickets - 1;
           System.out.println(
               human.firstName + " " + human.secondName + " прокатился на аттракционе" + attraction
                   + "у клиента осталось билетов " + "[" + human.getTicket() + "]");
-        }
+
         queue.addLast(human);
       }
       queue.poll();
