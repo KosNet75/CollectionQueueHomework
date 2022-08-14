@@ -12,22 +12,14 @@ String firstName;
     this.secondName = secondName;
     this.tickets = tickets;
    // this.attraction = attraction;
-
   }
 
+  public int getTickets() {
+    return tickets;
+  }
 
-  @Override
   public String toString() {
     return firstName  + " " + secondName + " - купил(а) [" + tickets + "] билет(а)";
-//        "Person{" +
-//        "name='" + firstName + '\'' +
-//        ", lastName='" + secondName + '\'' +
-//        ", count=" + tickets +
-//        '}';
-  }
-
-  public int getTicket() {
-    return tickets;
   }
 
   public static void printPersonTickets(List<Person> list) {
