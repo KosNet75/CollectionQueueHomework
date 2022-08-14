@@ -10,7 +10,11 @@ public class Main {
   public static void main(String[] args) {
     List<Person> person = new LinkedList<>();
 
-    Person.print(generateClients(person));
+
+
+      Person.printPersonTickets(generateClients(person));
+
+
 
     ArrayDeque<Person> queue = new ArrayDeque<>();
     // Первое добавление очереди.
@@ -40,21 +44,11 @@ public class Main {
 
   public static List<Person> generateClients(List<Person> persons) {
 
-//    String[] srcArr = {" Карусель ", " Колесо обозрения ",
-//        " Качели ", " Башня ",
-//        " Железная дорога ", " Американские горки ",
-//        " Кондор "};
-//    Random rnd = new Random();
-//    String[] selectedArr = new String[srcArr.length];
-//    for (int i = 0; i < srcArr.length; i++) {
-//      selectedArr[i] = srcArr[rnd.nextInt(srcArr.length)];
-//    }
-//     String attraction = selectedArr[human.tickets];
-
-    persons.add(new Person("Константин", "Густов", 1));
-    persons.add(new Person("Ольга", "Федорова", 3));
-    persons.add(new Person("Филипп", "Воронов", 4));
-    persons.add(new Person("Алёна", "Загрекова", 2));
+    persons.add(new Person("Николай", "Романов", 1));
+    persons.add(new Person("Евдокия", "Лопухина", 3));
+    persons.add(new Person("Александр", "Меньшиков", 4));
+    persons.add(new Person("Екатерина", "Шуйская", 2));
+    persons.add(new Person("Василий", "Голицин", 3));
 
     return persons;
 
