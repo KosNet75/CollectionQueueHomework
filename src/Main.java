@@ -19,13 +19,13 @@ public class Main {
     while (!queue.isEmpty()) {
       Person human = queue.getFirst();
 
-      if (human.tickets > 0) {
+      if (human.quantityTickets > 0) {
 
         String[] srcArr = {" Карусель ", " Колесо обозрения ", " Качели ", " Башня ",
             " Железная дорога ", " Американские горки ", " Кондор "};
            Random rnd = new Random();
           String attraction = srcArr[rnd.nextInt(srcArr.length)];
-          human.tickets = human.tickets - 1;
+          human.quantityTickets = human.quantityTickets - 1;
           System.out.println(
               human.firstName + " " + human.secondName + " прокатился на аттракционе" + attraction
                   + "у клиента осталось билетов " + "[" + human.getTickets() + "]");
