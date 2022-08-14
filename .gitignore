@@ -8,3 +8,5 @@ out/
 CollectionQueueHomework.iml
 .idea/.gitignore
 .idea/*
+.idea/
+.idea*
